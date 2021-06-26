@@ -1,8 +1,12 @@
 import './App.css';
 import CantidadPokemon from './components/CantidadPokemon';
 import ComprarPokemon from './components/CompraPokemon';
+
 import CantidadPokemonHook from './components/CantidadPokemon.hooks';
 import ComprarPokemonHook from './components/CompraPokemon.hooks';
+
+import BuscadorPokemon from './components/buscador/BuscadorPokemon';
+import ResultadoPokemon from './components/buscador/ResultadoPokemon';
 
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap/dist/js/bootstrap.bundle'
@@ -15,7 +19,7 @@ function App() {
     <Provider store = {store}>
       <div className="App container">
         <div className="row">
-          <div className="col-6">
+          <div className="col-md-4">
             <div className="card mt-5 style={{maxWidth: '370px'}} ">
               <div className="row no-gutters">
                 <div className="col-4">
@@ -31,7 +35,7 @@ function App() {
               </div>
             </div>
           </div>
-          <div className="col-6">
+          <div className="col-4">
             <div className="card mt-5 style={{maxWidth: '370px'}} ">
               <div className="row no-gutters">
                 <div className="col-4">
@@ -46,6 +50,14 @@ function App() {
                 </div>
               </div>
             </div>
+          </div>
+            <div className="row">
+              <div className="col-md-12 mt-4 border-top pt-3">
+                <BuscadorPokemon />
+              </div>
+              <div className="col-12 mt-2">
+                <ResultadoPokemon />
+              </div>
           </div>
         </div>
         </div>
